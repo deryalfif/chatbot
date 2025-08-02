@@ -9,7 +9,7 @@ import json
 # Page configuration
 st.set_page_config(
     page_title="Intelligo Chatbot Assistant",
-    page_icon="🤖",
+    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -100,7 +100,7 @@ def sidebar_config():
 
 def main_chat_interface():
     """Main chat interface"""
-    st.title("🤖 Intelligo Chatbot Assistant")
+    st.title("🎓 Intelligo Chatbot Assistant")
     st.markdown("Welcome to your AI chatbot assistant! Start a conversation below.")
     
     # Check if agent is initialized
