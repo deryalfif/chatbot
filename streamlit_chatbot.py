@@ -105,7 +105,7 @@ def main_chat_interface():
     
     # Check if agent is initialized
     if not st.session_state.api_key_set or st.session_state.agent is None:
-        st.warning("Please configure your OpenAI API key in the sidebar to start chatting.")
+        st.warning("Please configure your Assistant in the sidebar before starting a chat.")
         return
     
     # Display chat history
