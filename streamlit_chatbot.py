@@ -2,11 +2,9 @@ import streamlit as st
 import openai
 from datetime import datetime
 import os
-from dotenv import load_dotenv
 import json
 
 # Load environment variables
-load_dotenv()
 
 # Page configuration
 st.set_page_config(
@@ -17,7 +15,7 @@ st.set_page_config(
 )
 
 class ChatAgent:
-    def __init__(self, api_key=os.getenv("OPENAI_API_KEY"), model="gpt-4o-mini"):
+    def __init__(self, api_key=st.secrets["OPENAI_API_KEY"], model="gpt-4o-mini"):
         self.client = openai.OpenAI(api_key=api_key)
         self.model = model
         self.system_prompt = """Kamu adalah AI Assistant chatbot Data Science & AI di Intelligo ID. Kamu membantu siswa dengan pertanyaan teknis dan administrasi terkait bootcamp. Gunakan bahasa Indonesia yang friendly dan profesional."""
